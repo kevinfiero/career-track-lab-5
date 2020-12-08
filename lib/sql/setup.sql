@@ -4,3 +4,10 @@ CREATE TABLE pokemon (
     region TEXT NOT NULL,
     url TEXT NOT NULL
 );
+
+CREATE TABLE states (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    state TEXT NOT NULL,
+    capital TEXT NOT NULL,
+    url TEXT NOT NULL
+);
