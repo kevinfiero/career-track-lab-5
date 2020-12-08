@@ -18,3 +18,19 @@ CREATE TABLE furniture (
     construction_material TEXT NOT NULL,
     primary_color TEXT NOT NULL
 );
+
+CREATE TABLE consoles (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    console TEXT NOT NULL,
+    company TEXT NOT NULL,
+    country_HQ TEXT NOT NULL,
+    yearly_sales INT NOT NULL
+);
+
+CREATE TABLE coffees (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    coffee TEXT NOT NULL,
+    company TEXT NOT NULL,
+    hot BOOLEAN NOT NULL,
+    yearly_sales INT NOT NULL
+);
