@@ -1,10 +1,18 @@
 require('dotenv').config();
 const fakeRequest = require('supertest');
 const index = require('./index');
-const { execSync } = require('child_process');
-const client = require('./lib/utils/pool');
+const pool = require('./lib/utils/pool');
+const fs = require('fs');
 
 describe('test Pokemon model', () => {
+
+  beforeAll(() => {
+    return pool.query(fs.readFileSync('./lib/sql/setup.sql', 'utf-8'));
+  });
+
+  afterAll(() => {
+    return pool.end();
+  });
 
   // need to manually run 'npm run drop-tables' then 'npm run create tables' currently
   // can't figure out how to run these scripts. They work in command line...
