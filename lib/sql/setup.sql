@@ -1,0 +1,36 @@
+CREATE TABLE pokemon (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    region TEXT NOT NULL,
+    url TEXT NOT NULL
+);
+
+CREATE TABLE states (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    state TEXT NOT NULL,
+    capital TEXT NOT NULL,
+    url TEXT NOT NULL
+);
+
+CREATE TABLE furniture (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    furniture TEXT NOT NULL,
+    construction_material TEXT NOT NULL,
+    primary_color TEXT NOT NULL
+);
+
+CREATE TABLE consoles (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    console TEXT NOT NULL,
+    company TEXT NOT NULL,
+    country_HQ TEXT NOT NULL,
+    yearly_sales INT NOT NULL
+);
+
+CREATE TABLE coffees (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    coffee TEXT NOT NULL,
+    company TEXT NOT NULL,
+    hot BOOLEAN NOT NULL,
+    yearly_sales INT NOT NULL
+);
