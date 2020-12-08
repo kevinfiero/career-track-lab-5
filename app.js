@@ -1,5 +1,6 @@
 const Pokemon = require('./lib/models/Pokemon');
 const State = require('./lib/models/State');
+const Furniture = require('./lib/models/Furniture');
 
 // Pokemon
 //   .insert({ name: 'Charmander', region: 'Kanto', url: 'https://www.pokemon.com/us/pokedex/charmander' })
@@ -26,7 +27,11 @@ const State = require('./lib/models/State');
 //   .update(2, { name: 'Zapdos', region: 'Kanto', url: 'https://www.pokemon.com/us/pokedex/zapdos' })
 //   .then(console.log);
 
-State
-  .insert({ state: 'New York', capital: 'Albany', url: 'https://en.wikipedia.org/wiki/New_York_(state)' })
-  .then(console.log);
+// State
+//   .insert({ state: 'New York', capital: 'Albany', url: 'https://en.wikipedia.org/wiki/New_York_(state)' })
+//   .then(console.log);
+
+// Furniture
+//   .insert({ furniture: 'chair', constructionMaterial: 'wood', primaryColor: 'brown' })
+//   .then(console.log);
 

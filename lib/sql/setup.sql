@@ -11,3 +11,10 @@ CREATE TABLE states (
     capital TEXT NOT NULL,
     url TEXT NOT NULL
 );
+
+CREATE TABLE furniture (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    furniture TEXT NOT NULL,
+    construction_material TEXT NOT NULL,
+    primary_color TEXT NOT NULL
+);
