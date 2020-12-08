@@ -1,26 +1,13 @@
 const Pokemon = require('./lib/models/Pokemon');
+const express = require('express');
+require('dotenv').config();
+const app = express();
+app.use(express.json());
 
-// Pokemon
-//   .insert({ name: 'Charmander', region: 'Kanto', url: 'https://www.pokemon.com/us/pokedex/charmander' })
-//   .then(console.log);
 
-// Pokemon
-//   .insert({ name: 'Bulbasaur', region: 'Kanto', url: 'https://www.pokemon.com/us/pokedex/bulbasaur' })
-//   .then(console.log);
+app.post('/pokemon', async(req, res) => {
+  const pokemon = await Pokemon.insert(req.body);
+  res.send(pokemon);
+});
 
-// Pokemon
-//   .insert({ name: 'Squirtle', region: 'Kanto', url: 'https://www.pokemon.com/us/pokedex/squirtle' })
-//   .then(console.log);
-
-Pokemon
-  .find()
-  .then(console.log);
-
-  
-// Pokemon
-//   .delete(2)
-//   .then(console.log);
-
-// Pokemon
-//   .update(2, { name: 'Zapdos', region: 'Kanto', url: 'https://www.pokemon.com/us/pokedex/zapdos' })
-//   .then(console.log);
+module.exports = app;
